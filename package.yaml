@@ -20,9 +20,11 @@ description:         Please see the README on Github at <https://github.com/jirk
 
 dependencies:
 - base >= 4.7 && < 5
+- bytestring
 - containers
 - Hoed
 - parsec
+- pureMD5
 
 library:
   source-dirs: Lib
@@ -36,6 +38,9 @@ _generic-executable: &generic-executable
   - -with-rtsopts=-N
 
 executables:
+  Day04:
+    <<: *generic-executable
+    source-dirs: Day04
   Day07:
     <<: *generic-executable
     source-dirs: Day07
